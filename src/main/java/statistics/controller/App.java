@@ -47,7 +47,7 @@ public class App {
 			databaseName = "tictactoe";
 		} else {
 			mongoClientUri = mongoLabUri;
-			databaseName = "heroku_q1k9ht7d";
+			databaseName = "heroku_swwtmlzm";
 		}
 		final MongoClient client = new MongoClient(new MongoClientURI(mongoClientUri));
 		final MongoDatabase database = client.getDatabase(databaseName);
