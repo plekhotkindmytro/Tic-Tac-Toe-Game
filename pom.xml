@@ -47,7 +47,7 @@
 				<configuration>
 					<jdkVersion>1.8</jdkVersion>
 					<!-- Use your own application name -->
-					<appName>ultimate-statistics</appName>
+					<appName>tictactoe-stats</appName>
 					<processTypes>
 						<!-- Tell Heroku how to launch your application -->
 						<!-- You might have to remove the ./ in front -->

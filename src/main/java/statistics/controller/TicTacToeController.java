@@ -5,6 +5,7 @@ import statistics.dao.TicTacToeDao;
 import statistics.model.TicTacToeGame;
 
 import static spark.Spark.get;
+import static spark.Spark.post;
 
 /**
  * Created by D.Plekhotkin on 30/06/2017.
@@ -18,8 +19,9 @@ public class TicTacToeController {
         initializeRoutes();
     }
 
+
     private void initializeRoutes() {
-        get("/tictactoe/addGame", (request, response) -> {
+        post("/tictactoe/addGame", (request, response) -> {
             Gson gson = new Gson();
             TicTacToeGame game = gson.fromJson(request.body(), TicTacToeGame.class);
             ticTacToeDao.save(game);

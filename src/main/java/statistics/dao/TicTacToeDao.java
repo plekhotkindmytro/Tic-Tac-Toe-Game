@@ -7,7 +7,6 @@ import com.mongodb.client.model.UpdateOptions;
 import org.bson.Document;
 import statistics.model.TicTacToeCharacter;
 import statistics.model.TicTacToeGame;
-import statistics.model.statistics.EventStat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,7 +21,7 @@ public class TicTacToeDao {
     private final MongoCollection<Document> collection;
 
     public TicTacToeDao(MongoDatabase database) {
-        this.collection = database.getCollection("titactoe");
+        this.collection = database.getCollection("tictactoe");
     }
 
     public List<TicTacToeCharacter> getStatsByEdition(String neededEdition) {
@@ -65,7 +64,7 @@ public class TicTacToeDao {
         BasicDBObject incObject = new BasicDBObject().append("$inc", inc);
 
         BasicDBObject gameObject  = new BasicDBObject();
-        gameObject.append("playerImg", "game.getPlayerImg()");
+        gameObject.append("playerImg", game.getPlayerImg());
         gameObject.append("edition", game.getEdition());
 
         collection.updateOne(gameObject, incObject, new UpdateOptions().upsert(true).bypassDocumentValidation(true));
