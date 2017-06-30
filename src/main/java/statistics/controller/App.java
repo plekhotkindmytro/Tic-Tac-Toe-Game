@@ -19,7 +19,6 @@ import freemarker.template.Configuration;
 
 public class App {
 
-
 	static int getHerokuAssignedPort() {
 		ProcessBuilder processBuilder = new ProcessBuilder();
 		if (processBuilder.environment().get("PORT") != null) {
@@ -41,7 +40,7 @@ public class App {
 
 		final String mongoClientUri;
 		final String databaseName;
-		final String mongoLabUri = System.getenv().get("MONGOLAB_URI");
+		final String mongoLabUri = System.getenv().get("MONGODB_URI");
 		if (mongoLabUri == null) {
 			mongoClientUri = "mongodb://localhost:27017/tictactoe";
 			databaseName = "tictactoe";
