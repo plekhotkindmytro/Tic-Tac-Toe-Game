@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Source+Code+Pro:200|Anonymous+Pro');
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /*    background-color: #5B507A;*/
+    background-image: url(img/bg6.jpg);
+    background-size: cover;
+    background-position: bottom;
+    text-align: center;
+    font-family: 'Anonymous Pro', monospace;
+    color: #0A369D;
+}
+
+a,
+a:hover {
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.1;
+    font-family: 'Pacifico';
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#x-party-title,
+#o-party-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#x-party-title {
+    color: #15BAFE;
+}
+
+#o-party-title {
+    color: #58AA66;
+}
+
+.x-icon,
+.o-icon {
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+.table td img {
+    width: 60px;
+    height: 60px;
+}
+
+#icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#x-party-icons,
+#o-party-icons {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.player-icon {
+    cursor: pointer;
+    border: 1px dashed rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    padding: 0.5rem 0.5rem;
+}
+
+.player-icon:hover {
+    border-color: #fff;
+}
+
+#game-menu,
+#game {
+    width: 301px;
+    height: 301px;
+    font-size: 2rem;
+}
+
+#game-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 1px dashed #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 300px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .table td {
+        width: 100px;
+        height: 100px;
+    }
+    .table td img {
+        width: 60px;
+        height: 60px;
+    }
+    .x-icon,
+    .o-icon {
+        width: 45px;
+        height: 45px;
+    }
+    #game-menu,
+    #game {
+        width: 301px;
+        height: 301px;
+    }
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 2.75rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .table td {
+        width: 125px;
+        height: 125px;
+    }
+    .table td img {
+        width: 75px;
+        height: 75px;
+    }
+    .x-icon,
+    .o-icon {
+        width: 55px;
+        height: 55px;
+    }
+    #game-menu,
+    #game {
+        width: 376px;
+        height: 376px;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.75rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    .x-icon,
+    .o-icon {
+        width: 65px;
+        height: 65px;
+    }
+    .table td {
+        width: 140px;
+        height: 140px;
+    }
+    .table td img {
+        width: 90px;
+        height: 90px;
+    }
+    #game-menu,
+    #game {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    /*
+    49475B
+    E3C567
+    848C8E
+    C4CAD0
+    */
+}
+
+.table-bordered td {
+    border: 1px solid #848C8E;
+}
+
+.filled-cell {
+    pointer-events: none;
+}
+
+#end-game-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -54.36px;
+    margin-top: -19px;
+}
+
+.winning-cell {
+    background-color: white;
+}
+
+#player1,
+#player2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+#results {
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#game {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer {
+    font-family: 'Source Code Pro', monospace;
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.7rem;
+    width: 100%;
+    color: white;
+}
+
+#global-links {
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    background-color: #0A369D;
+    padding: 0.5rem;
+    width: 42px;
+    height: 42px;
+}
+
+#edition-switch {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 50%;
+    background-color: #0A369D;
+    padding: 0.5rem;
+}
+
+.edition-icon {
+    width: 25px;
+    height: 25px;
+}
